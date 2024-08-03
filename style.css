@@ -1,77 +1,85 @@
+:root {
+  --bg-color: hsl(0, 0%, 8%);
+  --container-bg-color: hsl(0, 0%, 12%);
+  --button-bg-color: hsl(0, 0%, 20%);
+  --button-hover-bg-color: hsl(75, 94%, 57%);
+  --text-color: hsl(0, 0%, 100%);
+  --text-hover-color: hsl(0, 0%, 20%);
+  --link-color: hsl(228, 45%, 44%);
+}
+
 html, body {
   height: 100%;
   margin: 0;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  background-color:hsl(0, 0%, 8%);
-  font-family: 'Inter', sans-serif;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  font-family: "Inter", sans-serif;
   font-weight: 400;
-  
 }
 
- button {
+.container {
+  align-content: center;
+  background-color: var(--container-bg-color);
+  padding: 20px;
+  width: 300px;
+  height: 550px;
+  text-align: center;
+  color: var(--text-color);
+  border-radius: 6px;
+}
+
+button {
   display: block;
-  margin: 15px;
+  margin: 15px auto;
   width: 240px;
   height: 40px;
   text-align: center;
   border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  background-color: hsl(0, 0%, 20%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
   border: none;
-  /* font-family: 'Inter', sans-serif; */
-}
-button:hover{
-  background-color: hsl(75, 94%, 57%);
-  color: hsl(0, 0%, 20%);
   cursor: pointer;
-  }
-
-.container{
-  /*display: flex;*/
-  align-content: center;
-  background-color: hsl(0, 0%, 12%);
-  padding: 20px;
-  border: 1px solid none;
-  width: 300px;
-  height: 550px;
-  text-align: center;
-  color: hsl(0, 0%, 100%);
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
- img {
+button:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--text-hover-color);
+}
+
+img {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 
-.social-links{
+.social-links {
   text-align: center;
   margin: 20px;
-
 }
 
-p{
+p {
   font-size: 14px;
 }
 
 h1 + p {
-  color: hsl(75, 94%, 57%);
+  color: var(--button-hover-bg-color);
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--link-color);
+}
+
+@media (max-width: 375px) {
+  .container {
+      width: 100%;
+      max-width: 375px;
+  }
+}
