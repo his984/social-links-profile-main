@@ -29,11 +29,12 @@ html, body {
 button:hover{
   background-color: hsl(75, 94%, 57%);
   color: hsl(0, 0%, 20%);
-}
+  cursor: pointer;
+  }
 
 .container{
-  /*display: flex;
-  */align-content: center;
+  /*display: flex;*/
+  align-content: center;
   background-color: hsl(0, 0%, 12%);
   padding: 20px;
   border: 1px solid none;
@@ -71,3 +72,6 @@ p{
 h1 + p {
   color: hsl(75, 94%, 57%);
 }
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
